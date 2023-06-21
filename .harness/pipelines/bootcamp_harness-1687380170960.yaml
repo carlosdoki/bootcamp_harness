@@ -1,0 +1,33 @@
+pipeline:
+  identifier: Build_bootcamp_harness_1687380200350
+  name: Build bootcamp_harness
+  orgIdentifier: default
+  projectIdentifier: Partner_Bootcamp_Carlos_Doki
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github_OAuth_1687380150849
+        repoName: carlosdoki/bootcamp_harness
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
