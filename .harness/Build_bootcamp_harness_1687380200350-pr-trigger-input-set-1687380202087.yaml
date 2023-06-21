@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_bootcamp_harness_1687380200350-pr-trigger-input-set
+  identifier: Build_bootcamp_harness_1687380200350prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: Partner_Bootcamp_Carlos_Doki
+  pipeline:
+    identifier: Build_bootcamp_harness_1687380200350
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
